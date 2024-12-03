@@ -1,5 +1,5 @@
 
-  .visually-hidden {
+  /* .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -88,7 +88,7 @@
     width: 121px;
     margin: auto 0;
     padding: 6px;
-  }
+  } */
 
   /* .cta-button {
     align-self: stretch;
@@ -101,36 +101,36 @@
     padding: 2px 6px 2px 7px;
   } */
 
-  .cta-button {
+  /* .cta-button {
     align-self: stretch;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     /* Updated to include radial gradient */
-    background: radial-gradient(
+    /* background: radial-gradient(
         circle at center, 
         rgba(57, 29, 104, 1) 0%, 
         /* rgba(160, 80, 255, 1) 50%,  */
-        rgba(97, 74, 134, 1) 100%
-    );
+        /* rgba(97, 74, 134, 1) 100% */
+    /* );
     min-height: 30px;
     width: 109px;
     overflow: hidden;
-    padding: 2px 6px 2px 7px;
-    color: white; /* Ensures text is visible */
-    font-size: 14px; /* Adjust as needed */
-    text-align: center; /* Centers the text */
-    display: flex;
+    padding: 2px 6px 2px 7px; */
+    /* color: white; /* Ensures text is visible */
+    /* font-size: 14px; Adjust as needed */
+    /* text-align: center; Centers the text */
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer; /* Changes cursor on hover */
-    transition: background 0.3s ease; /* Smooth transition on hover */
-}
+    justify-content: center; */
+    /* cursor: pointer; Changes cursor on hover
+    transition: background 0.3s ease; Smooth transition on hover
+} */ 
 
-.cta-button:hover {
+/*.cta-button:hover { 
     /* Optional: Slightly adjust the gradient on hover for interactivity */
-    background: radial-gradient(
+    /* background: radial-gradient(
         circle at center, 
-        rgb(7, 7, 7) 0%, 
+        rgba(160, 80, 255, 1) 0%, 
         rgba(180, 90, 255, 1) 50%, 
         rgba(160, 80, 255, 1) 100%
     );
@@ -189,7 +189,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
-  }
+  }  */
 
 /* box3 */
   /* .visually-hidden {
@@ -699,9 +699,20 @@
     margin-top: 7px;
   } */
 
+
+
+
+
+
+
+
+
+
+
+
 /* #Mainnn */
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -715,7 +726,7 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 80px;
+  padding: 100 0px;
 }
 
 .content-container {
@@ -728,17 +739,19 @@
 }
 
 .nav-container {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);  /* Change border thickness to 2px */
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.15); */
   display: flex;
   width: 100%;
   max-width: 1200px;
   align-items: center;
+  justify-content: center; 
   gap: 40px 74px;
   font: 400 16px/26px Inter, sans-serif;
   letter-spacing: -0px;
-  justify-content: center;
   flex-wrap: wrap;
   padding: 13px 0;
+  margin: 0 auto;
 }
 
 .logo {
@@ -788,12 +801,13 @@
 .cta-button {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  align-self: stretch;
+  align-self: center;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   align-items: center;
-  font-size: 14px;
+  font-size: 20 px;
+  font-weight: 700px;
   color: #fff;
   text-align: center;
   justify-content: center;
@@ -812,25 +826,29 @@
   width: 109px;
   gap: 10px;
   overflow: hidden;
-  padding: 2px 6px 2px 7px;
+  padding: 2px 6px 2px 6px;
+  box-shadow: inset 0 2px 6px rgba(57, 29, 104, 0.2), inset 0 -2px 4px rgba(234, 226, 246, 0.3); 
 }
 
 .hero-section {
   position: relative;
   display: flex;
-  min-height: 1167px;
+  height: 200vh;
   width: 100%;
-  max-width: 1200px;
+   /* max-width: 1200px;  */
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  margin: 0 auto; /* Ensure it stays in the center for larger screens */
+  overflow: hidden; /* Prevents content spillover */
 }
 
 .hero-image {
   aspect-ratio: 1.03;
-  object-fit: contain;
-  object-position: center;
+  object-fit:cover;
+  object-position:top;
   width: 100%;
+  height: 100%;
   align-self: center;
   z-index: 0;
 }
@@ -838,13 +856,15 @@
 .hero-description {
   color: #fff;
   text-align: center;
-  letter-spacing: -0px;
+  letter-spacing: 0px;
   position: absolute;
   z-index: 1;
-  width: 544px;
-  right: 328px;
-  top: 245px;
-  font: 400 20px/31px Inter, sans-serif;
+  width: 80%; /* Made responsive to screen size */
+  max-width: 544px;
+  font: 400 20px/31px 'Inter', sans-serif;
+  top: 15%; /* Centers vertically within the hero section */
+  left: 50%; /* Aligns the text horizontally */
+  transform: translate(-50%, -15%); /* Centers text with respect to its position */
 }
 
 .badge-container {
@@ -868,13 +888,16 @@
 .badge {
   border-radius: 40px;
   background-color: rgba(152, 85, 255, 1);
-  align-self: stretch;
+  align-self:center;
   min-height: 18px;
-  font-size: 10px;
+  font-size: 12px;
   color: rgba(0, 0, 0, 1);
-  font-weight: 700;
+  font-weight: 900;
   white-space: nowrap;
   line-height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 34px;
   margin: auto 0;
   padding: 1px 5px;
@@ -899,7 +922,7 @@
   position: absolute;
   z-index: 1;
   left: 50%;
-  top: 146px;
+  top: 70px;
   transform: translate(-50%, 0%);
   width: 812px;
   height: 84px;
@@ -1273,4 +1296,4 @@
   }
 }
 
- */
+
