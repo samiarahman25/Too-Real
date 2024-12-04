@@ -150,7 +150,7 @@
   }
 
 /* box2 */
-  .visually-hidden {
+  /* .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -189,7 +189,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
-  }  */
+  }  */ */
 
 /* box3 */
   /* .visually-hidden {
@@ -867,6 +867,7 @@
   transform: translate(-50%, -15%); /* Centers text with respect to its position */
 }
 
+
 .badge-container {
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 1);
@@ -929,7 +930,7 @@
   font: 500 82px/1 Inter, sans-serif;
 }
 
-.features-section {
+/* .features-section {
   position: relative;
   display: flex;
   min-height: 933px;
@@ -968,7 +969,15 @@
   right: -84px;
   bottom: -62px;
   height: 664px;
-}
+} */
+
+
+
+
+
+
+
+
 
 .awareness-section {
   position: relative;
