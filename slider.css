@@ -1,0 +1,145 @@
+
+
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(30deg, rgb(100, 241, 84), rgb(92, 92, 229), rgb(111, 30, 30));
+    overflow: hidden;
+}
+
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.imgcontainer {
+    display: flex;
+    position: absolute;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slider_div {
+    margin: 0 20px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+
+.flipper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 0.7s ease-in-out;
+}
+
+
+
+ #slider1:target ~ .imgcontainer .slider_div:nth-child(1):hover .flipper,
+#slider2:target ~ .imgcontainer .slider_div:nth-child(2):hover .flipper,
+#slider3:target ~ .imgcontainer .slider_div:nth-child(3):hover .flipper,
+#slider4:target ~ .imgcontainer .slider_div:nth-child(4):hover .flipper,
+#slider5:target ~ .imgcontainer .slider_div:nth-child(5):hover .flipper {
+    transform: rotateY(180deg) scale(1.05);
+    transition: transform 0.7s ease-in-out;
+}
+
+
+
+.front, .back {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    backface-visibility: hidden;
+    border-radius: 30px; 
+    overflow: hidden;
+}
+
+
+.front {
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.back {
+    transform: rotateY(180deg);
+    background: #f3f3f3;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    filter: saturate(10%);
+    border-radius: 30px;
+    margin: 10px;
+    transition: all 0.7s ease-in-out;
+}
+
+
+.button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 370px;
+    border-radius: 20px;
+    transition: background 0.7s ease-in-out;
+}
+
+.button:hover {
+    background: none; 
+}
+
+#slider1:target ~ .imgcontainer {
+    transform: translateX(40%);
+}
+#slider2:target ~ .imgcontainer {
+    transform: translateX(20%);
+}
+#slider3:target ~ .imgcontainer {
+    transform: translateX(0%);
+}
+#slider4:target ~ .imgcontainer {
+    transform: translateX(-20%);
+}
+#slider5:target ~ .imgcontainer {
+    transform: translateX(-40%);
+}
+
+
+#slider1:target ~ .imgcontainer .slider_div:nth-child(1) .front img,
+#slider2:target ~ .imgcontainer .slider_div:nth-child(2) .front img,
+#slider3:target ~ .imgcontainer .slider_div:nth-child(3) .front img,
+#slider4:target ~ .imgcontainer .slider_div:nth-child(4) .front img,
+#slider5:target ~ .imgcontainer .slider_div:nth-child(5) .front img {
+    filter: saturate(100%);
+    
+} 
